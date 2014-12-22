@@ -1,0 +1,16 @@
+{
+  "name": "force-ssl-heroku",
+  "version": "0.0.1",
+  "description": "An express middleware that redirects unencrypted HTTP requests to HTTPS",
+  "main": "force-ssl-heroku.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rangle/force-ssl-heroku.git"
+  },
+  "author": "Seth Davenport",
+  "license": "MIT",
+  "homepage": "https://github.com/rangle/force-ssl-heroku"
+}
