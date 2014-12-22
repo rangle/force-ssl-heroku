@@ -6,7 +6,7 @@ module.exports = function (req, res, next) {
   if (process.env.NODE_ENV === 'production' &&
     req.headers['x-forwarded-proto'] !== 'https') {
 
-    sslUrl = ['https://', req.host, req.url].join('');
+    sslUrl = ['https://', req.hostname, req.url].join('');
     return res.redirect(sslUrl);
   }
 
