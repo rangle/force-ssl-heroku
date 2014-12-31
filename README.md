@@ -1,4 +1,4 @@
-heroku-force-ssl
+force-ssl-heroku
 ================
 
 An express middleware that redirects unencrypted HTTP requests to HTTPS on Heroku instances.
@@ -6,7 +6,7 @@ An express middleware that redirects unencrypted HTTP requests to HTTPS on Herok
 Heroku does SSL termination at its load balancer.  However, the
 internal nodeJS app can tell if the original request was made with
 HTTP by inspecting headers inserted by Heroku.  We can use this
-to redirect to the HTTPS heroku url.
+to redirect to the HTTPS Heroku url.
 
 Installation
 ============
@@ -38,4 +38,4 @@ app.listen(3000, 'localhost');
 Caveat
 ======
 
-It works because Heroku exposes your app through a reverse proxy which is used for load-balancing and other things.  This reverse proxy doess SSL termination and forwards to your app which __should only accept connections from localhost__.  This middleware detects this situation by inspecting headers inserted by Heroku's reverse proxy;  __since headers can be spoofed, you should not use this middleware anywhere that's not behind such a proxy__!
+It works because Heroku exposes your app through a reverse proxy which is used for load-balancing and other things.  This reverse proxy does SSL termination and forwards to your app which __should only accept connections from localhost__.  The middleware detects this situation by inspecting headers inserted by Heroku's reverse proxy;  __since headers can be spoofed, you should not use this middleware anywhere that's not behind such a proxy__!
