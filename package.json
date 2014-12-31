@@ -1,6 +1,6 @@
 {
   "name": "force-ssl-heroku",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An express middleware that redirects unencrypted HTTP requests to HTTPS",
   "main": "force-ssl-heroku.js",
   "scripts": {
